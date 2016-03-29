@@ -1,5 +1,6 @@
 package org.poolc.poolc1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,7 +26,8 @@ public class LoginActivity extends AppCompatActivity {
                 String password = pwEditText.getText().toString();
 
                 if (id.equals("test") && password.equals("makkapakka")) {
-                    Toast.makeText(LoginActivity.this, "로그인 성공.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, BoardActivity.class);
+                    startActivity(intent);
                 }
                 else {
                     Toast.makeText(LoginActivity.this, "아이디나 비밀번호가 다릅니다.", Toast.LENGTH_SHORT).show();
