@@ -12,12 +12,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn = (Button) findViewById(R.id.button_main_1);
-        assert btn != null;
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btn1 = (Button) findViewById(R.id.button_main_1);
+        assert btn1 != null;
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn2 = (Button) findViewById(R.id.button_main_2);
+        assert btn2 != null;
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
         });
